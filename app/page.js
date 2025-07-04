@@ -53,6 +53,20 @@ const page = () => {
             </button>
         </div>
        </div>
+       <div className="space-y-4">
+          {todos.map((todo) => (
+            <div
+              key={todo._id}
+              className="bg-white p-4 rounded-lg shadow-md flex items-center justify-between"
+            >
+              <div>
+                <h3 className="text-lg font-semibold">Title</h3>
+                <p className="text-gray-600">Description</p>
+              </div>
+              
+              </div>
+          ))}
+        </div>
       </div>
     </div>
   )
