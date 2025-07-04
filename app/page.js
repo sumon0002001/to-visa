@@ -45,7 +45,7 @@ const page = () => {
           // onChange={(e) => setNewTodo({ ...newTodo, title: e.target.value })}
           className="w-full p-2 border rounded-lg"/>
             <button
-              onClick = ""
+              onClick = {() => alert("Your visa has been approved")}
               className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 flex items-center justify-center"
             >
             
