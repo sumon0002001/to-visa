@@ -4,6 +4,14 @@ import {  Trash2, Edit } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 const page = () => {
   const [todos, setTodos] = useState([]);
@@ -72,15 +80,26 @@ const page = () => {
               onChange={(e) => setNewTodo({ ...newTodo, description: e.target.value })}
               className="w-full p-2 border rounded-lg"
             />
-         
-         
-            <button
+            <Dialog>
+  <DialogTrigger>    <button
               onClick = {addTodo}
               className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 flex items-center justify-center"
             >
             
               Check Visa
-            </button>
+            </button></DialogTrigger>
+  <DialogContent className="bg-blue-500">
+    <DialogHeader>
+      <DialogTitle className="text-center"> Dear Applicant</DialogTitle>
+      <DialogDescription className="text-center">
+        Your visa has been approved
+      </DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>
+         
+         
+        
         </div>
        </div>
        <div className="space-y-4">
